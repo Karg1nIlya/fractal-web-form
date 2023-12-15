@@ -1,0 +1,11 @@
+.form-white-btn {
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #5558FA;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: #5558FA;
+    cursor: pointer;
+}

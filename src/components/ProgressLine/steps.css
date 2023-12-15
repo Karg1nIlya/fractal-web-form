@@ -1,0 +1,103 @@
+.progress-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; 
+    flex: 1; 
+}
+
+.step__title, .step__title--active {
+    margin-top: 1.75rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #666666;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.step:first-child .step__title--active {
+    justify-content: start;
+}
+
+.step:last-child .step__title--active, .step:last-child .step__title {
+    justify-content: end;
+}
+
+.step__title--active {
+    color: #5558FA;
+}
+
+.step-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;  
+}
+
+.step-part__pre-line, .step-part__post-line {
+    height: 0.4rem;
+    width: 100%;
+    transition: all 1.5s ease-in-out;
+}
+
+.step-part__point {
+    background-color: #666666;
+    min-width: 1rem;
+    min-height: 1rem;
+    border-radius: 100%;
+    transition: all 1.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active .step-part__pre-line {
+    background-color: #5558FA;
+}
+
+.active .step-part__post-line {
+    background-color: rgb(230, 230, 230);
+}
+
+.active .step-part__point {
+    background-color: #5558FA;
+}
+
+.inactive .step-part__pre-line, .inactive .step-part__post-line {
+    background-color: rgb(230, 230, 230);
+} 
+
+.done .step-part__pre-line, .step-part__post-line {
+    background-color: #5558FA;
+}
+
+.done .step-part__point {
+    background-color: #5558FA; 
+}
+
+.progress-line .step:first-child .step-part .step-part__pre-line {
+    display: none;
+}
+
+.progress-line .step:last-child .step-part .step-part__post-line {
+    display: none;
+}
+
+.step-part__point-active {
+    width: 0.2rem;
+    height: 0.2rem;
+    background-color: white;
+    border-radius: 100%;
+}

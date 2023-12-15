@@ -1,0 +1,31 @@
+.form-page {
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+    font-family: "TT Travels";
+}
+
+.form-page__container {
+    max-width: 56.25rem;
+    height: auto;
+    padding: 3.87rem 6.87rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 495px) {
+    .form-page {
+        height: auto;
+        padding: 0;
+        
+    }
+    
+    .form-page__container {
+        padding: 2.3rem 4.3rem;
+        max-width: 36.25rem;
+        min-width: 22.38rem;
+        border-radius: 0;
+        height: 100vh;
+    }
+}
