@@ -2,6 +2,8 @@ import { IForm } from "@/models/IForm";
 
 export enum actionTypes {
     SHOW_LOADER = 'SHOW_LOADER',
+    HIDE_LOADER = 'HIDE_LOADER',
+    CLEAR_DATA = 'CLEAR_DATA',
     ADD_DATA_FROM_STEP_0 = 'ADD_DATA_FROM_STEP_0',
     ADD_DATA_FROM_STEP_1 = 'ADD_DATA_FROM_STEP_1',
     ADD_DATA_FROM_STEP_2 = 'ADD_DATA_FROM_STEP_2',

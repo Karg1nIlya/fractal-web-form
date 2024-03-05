@@ -38,7 +38,6 @@
 .form-input {
     padding: 0.75rem;
     border-radius: 0.25rem;
-    border: 1px solid rgba(0, 0, 0, 0.16);
     background: rgba(0, 0, 0, 0.04);
     font-size: 0.875rem;
     font-style: normal;
@@ -49,6 +48,10 @@
 
 .form-input:focus {
     outline: none;
+}
+
+.step-form__input {
+    border: 1px solid rgba(0, 0, 0, 0.16);
 }
 
 .step-form__input--error {
@@ -151,7 +154,7 @@
     border: 2px solid rgba(255, 0, 0, 0.36);
 }
 
-.step-form__counter-text{
+.step-form__counter-text {
     position: absolute;
     right: 0.6rem;
     bottom: 0.6rem;

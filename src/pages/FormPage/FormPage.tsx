@@ -9,7 +9,7 @@ import { Modal } from "@/components/Modal/Modal";
 import { SuccessModal } from "@/components/Modal/modalContent/SuccessModal/SuccessModal";
 import { ErrorModal } from "@/components/Modal/modalContent/ErrorModal/ErrorModal";
 import { useDispatch } from "react-redux";
-import { sendForm, showLoader } from "@/store/actions/formAction";
+import { clearData, hideLoader, sendForm, showLoader } from "@/store/actions/formAction";
 import { actionTypes } from "@/store/types/types";
 import { IForm } from "@/models/IForm";
 
@@ -65,8 +65,12 @@ export default function FormPage() {
             setModalSuccessVisible(true)
         })
         .catch(e => {
+            dispatch(hideLoader(actionTypes.HIDE_LOADER))
             dispatch(e as any)
             setModalErrorVisible(true)
+        })
+        .finally(() => {
+            dispatch(clearData(actionTypes.CLEAR_DATA))
         })
     }
 

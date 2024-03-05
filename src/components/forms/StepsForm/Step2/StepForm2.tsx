@@ -64,7 +64,7 @@ export function StepForm2({onNextStep, onPrevStep}: IStepFormProps) {
                                             <Field
                                                 name={`advantages[${i}]`}
                                                 placeholder="Введите текст"
-                                                className={`form-input step-form-advantage__input${(errors.advantages ? errors.advantages[i] : false) && (Array.isArray(touched.advantages) ? touched.advantages[i] : false) ? '--error' : ''}`}
+                                                className={`form-input step-form-advantage__input${(errors.advantages ? errors.advantages[i] : '') && (Array.isArray(touched.advantages) ? touched.advantages[i] : false) ? '--error' : ''}`}
                                             />
                                             <button type="button" className="step-form-advantage__remove-btn" onClick={()=>{
                                                 if(values.advantages.length>1) {
@@ -76,13 +76,13 @@ export function StepForm2({onNextStep, onPrevStep}: IStepFormProps) {
                                         </div>  
                                     )
                                 })}
-                        </div>
-                        <button type="button" className="step-form__add-advantage-btn" onClick={()=>{
-                            if(values.advantages.length<11) {
-                                push("")
-                            } 
-                        }}><img src={plusImg} alt="plusImg" /></button>
-                        </>
+                            </div>
+                            <button type="button" className="step-form__add-advantage-btn" onClick={()=>{
+                                if(values.advantages.length<11) {
+                                    push("")
+                                } 
+                            }}><img src={plusImg} alt="plusImg" /></button>
+                            </>
                         )}
                     </FieldArray>    
                     <div role="group" aria-labelledby="step-form-checkbox-group" className="step-form__click-group">

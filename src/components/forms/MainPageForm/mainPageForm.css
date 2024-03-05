@@ -21,7 +21,6 @@
 .form-input {
     padding: 0.75rem;
     border-radius: 0.25rem;
-    border: 1px solid rgba(0, 0, 0, 0.16);
     background: rgba(0, 0, 0, 0.04);
     font-size: 0.875rem;
     font-style: normal;
@@ -32,6 +31,10 @@
 
 .form-input:focus {
     outline: none;
+}
+
+.main-page-form__input {
+    border: 1px solid rgba(0, 0, 0, 0.16);
 }
 
 .main-page-form__input--error {

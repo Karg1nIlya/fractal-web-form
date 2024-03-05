@@ -6,6 +6,18 @@ export const showLoader = (type: string) => {
     }
 }
 
+export const hideLoader = (type: string) => {
+    return {
+        type
+    }
+}
+
+export const clearData = (type: string) => {
+    return {
+        type
+    }
+}
+
 export const addDataFromStep0 = (type: string, data: InitialForm) => {
     return {
         type,

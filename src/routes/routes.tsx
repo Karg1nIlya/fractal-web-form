@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { createHashRouter } from "react-router-dom";
 import { LazyMainPage } from "@/pages/MainPage/MainPage.lazy";
 import { LazyFormPage } from "@/pages/FormPage/FormPage.lazy";

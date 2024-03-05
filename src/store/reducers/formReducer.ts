@@ -8,6 +8,15 @@ export const formReducer = (state = initialState, action: IAction) => {
             return {...state, loading: true};
         }
 
+        case actionTypes.HIDE_LOADER: {
+            return {...state, loading: false};
+        }
+
+        case actionTypes.CLEAR_DATA: {
+            state = initialState
+            return {...state, loading: false};
+        }
+
         case actionTypes.ADD_DATA_FROM_STEP_0: {
             let newData: InitialForm = action.payload.data
             return {...state, dataForm: {...state.dataForm, ...newData}}

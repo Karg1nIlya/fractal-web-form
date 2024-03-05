@@ -88,9 +88,7 @@ export function StepForm1({onNextStep, onPrevStep}: IStepFormProps) {
                             name="nickname"
                             className={`form-input step-form__input${errors.nickname && touched.nickname ? '--error' : ''}`}
                         />
-                        <div className="step-form__warning">
-                            <ErrorMessage className="step-form__warning" name="nickname"></ErrorMessage>
-                        </div>
+                        <ErrorMessage name="nickname" render={msg => <div className="step-form__warning">{msg}</div>} />
                     </div>
                     <div className="step-form__item">
                         <label className="step-form__label">Имя</label>
@@ -99,9 +97,7 @@ export function StepForm1({onNextStep, onPrevStep}: IStepFormProps) {
                             name="name"
                             className={`form-input step-form__input${errors.name && touched.name ? '--error' : ''}`}
                         />    
-                        <div className="step-form__warning">
-                            <ErrorMessage className="step-form__warning" name="name"></ErrorMessage>   
-                        </div>
+                        <ErrorMessage name="name" render={msg => <div className="step-form__warning">{msg}</div>} />
                     </div>
                     <div className="step-form__item">
                         <label className="step-form__label">Фамилия</label>
@@ -110,9 +106,7 @@ export function StepForm1({onNextStep, onPrevStep}: IStepFormProps) {
                             name="surname"
                             className={`form-input step-form__input${errors.surname && touched.surname ? '--error' : ''}`}
                         />
-                        <div className="step-form__warning">
-                            <ErrorMessage  name="surname"></ErrorMessage>
-                        </div>
+                       <ErrorMessage name="surname" render={msg => <div className="step-form__warning">{msg}</div>} />
                     </div>
                     <div className="step-form__item">
                         <label className="step-form__label">Пол</label>
